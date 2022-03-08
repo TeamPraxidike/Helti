@@ -75,4 +75,3 @@ pip install opencv-python
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-специални поздрави и благодарности на Геша, Александър и Пепи - морална подкрепа
