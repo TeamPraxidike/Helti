@@ -75,4 +75,4 @@ The current develpment stage revolves around 2 versions of the Bot:
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-special thanks to gesha, alexander and pepi - moral support
+
