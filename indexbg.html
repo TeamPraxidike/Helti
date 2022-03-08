@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helti</title>
+
+    <!-- * Linkage -->
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+    <header>
+        <img src="./images/HELTI.png" alt="PRAXIDIKE">
+        <a href="./index.html">For english press here</a>
+        <a id="helti_mail" href="#"><i class="fa fa-envelope"></i> helti.customer.service@gmail.com</a>
+    </header>
+    <main role="main">
+        <article id="login_form_div_bg">
+            <!-- Login with two sections -->
+            <section id="login_form_info">
+                
+            </section>
+            <section id="login_form">
+                <form id="login_form_tag" action="">
+                    <div class="container">
+                        <div class="form_text_box">
+                            <input class="form_input" type="text" placeholder="" name="uname" required id="email_field">
+                            <label class="from_label" for="uname">Имейл</label>
+                            <span class="form_span"></span>
+                        </div>
+                        <div class="form_text_box">
+                            <input class="form_input" type="password" placeholder="" name="psw" required id="pass_field">
+                            <label class="from_label" for="psw">Парола</label>
+                            <span class="form_span"></span>
+                        </div>
+                        <div class="form_pass">Забравена парола?</div>
+                        <button onclick="login()" type="button" class="submit_btn">Вписване</button>
+                        <span id="register"">Нямате акаунт? <a href="./pages/register.html">Регистрация</a></span>
+                    </div>
+                </form>
+                <div id="loggedin">
+                    <span>Здравей, </span>
+                    <span id="usaer_span">USER</span>
+                    <a href="pages/panelbg.html"><button onclick="" type="button" class="submit_btn">Влез в портала</button></a>
+                    <span id="logged_in_logout" onclick="logout()">Излизане от профила.</span>
+                </div>
+            </section>
+        </article>
+        <article id="info_boxes">
+            <section id="info_boxes_text">
+                <span>Сайт на ХИС - <a class="links_info" href="https://www.his.bg/bg/dgc">here</a></span>
+                <span>Ваксини - <a class="links_info" href="https://coronavirus.bg/bg/vaccinations">here</a><br></span>
+                <span>Covid+ Cert - <a class="links_info" href="https://play.google.com/store/apps/details?id=dcc.check.bg">here</a></span>
+                <span>Vax Register - <a class="links_info" href="https://www.his.bg/bg/reservation">here</a><br></span>
+                <br>
+                <span>Ние сме Праксидика и обичаме да помагаме на хората. Нашият отбор направи това приложение, за да може следенто на прегледи да става сигурно и лесно за ползване. Регистрирайте се като пациент или доктор и вижте опътването за ползване <a href="https://youtu.be/Y4knOpRMoxs">тук</a>.</span>
+            </section>
+            <section id="info_boxes_icons">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>Общо случая</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Общо случая</h1>
+                            <p>537 752</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>Дози ваксини сложени</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Дози ваксини сложени</h1>
+                            <p>2 623 783</p>
+                            <p>Имайте предвид, че това не е броя на ваксинираните.</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>Излекувани</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Излекувани</h1>
+                            <p>456 800</p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>Хоспитализирани</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Хоспитализирани</h1>
+                            <p>5 936</p>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </article>
+        <article id="map_with_stats">
+            <div id="map"></div>
+        </article>
+    </main>
+    <footer>
+        <p>Helti &COPY; направено от Праксидика</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
+
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <script>
+        auth.onAuthStateChanged(function(user) {
+        if(user) {
+
+            document.getElementById("loggedin").style.display = "flex";
+            document.getElementById("login_form_tag").style.display = "none";
+
+            document.getElementById("usaer_span").innerText = user.email;
+
+        } else {
+
+            document.getElementById("loggedin").style.display = "none";
+            document.getElementById("login_form_tag").style.display = "flex";
+        }
+        });
+    </script>
+</body>
+</html>
+
+<!-- ! ISKRA MI STURJE MOZUKA OTVUTRE -->

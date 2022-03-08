@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart disease AI prediction</title>
+</head>
+<style>
+    body {
+        background-color: #F8F9FA;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        padding: 20px 2%;
+        display: grid;
+        grid-template: auto / 3fr 2fr;
+    }
+    
+    #whattoenter {
+        border-radius: 5px;
+        background-color: #b9c4cf;
+        width: 500px;
+        padding: 20px;
+    }
+
+    img {
+        height: 80%;
+    }
+
+    header {
+        background-color: #191010;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header a {
+        color: #f3e8e8;
+        margin-right: 2vw;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <header>
+        <img src="images\HELTI.png" alt="PRAXIDIKE">
+        <a id="helti_mail" href="#"><i class="fa fa-envelope"></i> helti.customer.service@gmail.com</a>
+    </header>
+    <main>
+        <div id="container_model">
+            <h1>Predict chance of heart disease in patient</h1>
+            <p>
+                Enter values seperated by comma:
+            </p>
+        
+            <form action="/" method="POST">
+                <input type="text" name="data" placeholder="Values of attributes">
+                <input type="submit">
+            </form>
+            {% if prediction %}
+                <p>Patient's chance of heart disease: </p> {{prediction}}
+            {% endif %}
+        </div>
+        <div id="legend">
+            <div id="whattoenter">
+                <p>You should enter these attributes seperated by comma:</p>
+                <p> 1. age <br>
+                    2. sex <br>
+                    3. chest pain type (4 values)<br>
+                    4. resting blood pressure<br>
+                    5. serum cholestoral in mg/dl<br>
+                    6. fasting blood sugar > 120 mg/dl<br>
+                    7. resting electrocardiographic results (values 0,1,2)<br>
+                    8. maximum heart rate achieved<br>
+                    9. exercise induced angina<br>
+                    10. oldpeak = ST depression induced by exercise relative to rest<br>
+                    11. the slope of the peak exercise ST segment<br>
+                    12. number of major vessels (0-3) colored by flourosopy<br>
+                    13. thal: 3 = normal; 6 = fixed defect; 7 = reversable defect</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

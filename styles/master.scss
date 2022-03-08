@@ -1,0 +1,408 @@
+// sass ./styles/master.scss ./styles/master.css
+// sass --watch master.scss:master.css
+
+// ? Imports
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
+
+// ? Variables
+$accent_blue: #CCDBFD;
+$accent_red: #E94957;
+$main_light: #F8F9FA;
+$main_dark: #969899;
+$text_dark: #252422;
+$text_light: hsl(0, 31%, 93%);
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background-color: $main_light;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header {
+    background-color: hsl(0, 21%, 8%);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 80%;
+    }
+
+    a {
+        color: $text_light;
+        margin-right: 2vw;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+}
+
+main {
+    width: 100%;
+}
+
+#login_form_div {
+    display: grid;
+    grid-template: 700px / 2fr 3fr;
+    background-image: url("../images/phonefr.png");
+    border-bottom: $text_dark 15px solid;
+}
+
+#login_form_div_bg {
+    display: grid;
+    grid-template: 700px / 2fr 3fr;
+    background-image: url("../images/phonefrbg.png");
+    border-bottom: $text_dark 15px solid;
+}
+
+#login_form_info {
+    grid-area: 1 / 2 / span 1 / span 1;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        padding: 0 40px;
+        box-sizing: border-box;
+        border-radius: 25px;
+        overflow: hidden;
+        font-size: 1.2em;
+
+        .form_text_box {
+            position: relative;
+            border-bottom: 1px solid;
+            margin-bottom: 20px;
+            margin: 20px 0;
+
+            input {
+                border: none;
+                background: none;
+                outline: none;
+                width: 100%;
+                font-size: 16px;
+                height: 30px;
+            }
+
+            label {
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                font-size: 16px;
+                color: #adadad;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+            
+            span::before {
+                content: '';
+                position: absolute;
+                top: 31px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: #76282f;
+                transition: 0.5s;
+            }
+
+            .form_input:focus + .from_label {
+                top: -5px;
+            }
+
+            .form_input:valid + .from_label {
+                top: -5px;
+            }
+
+            .from_label {
+                transition: .2s;
+            }
+
+            .form_input:focus ~ .form_span::before {
+                width: 100%;
+            }
+
+            .form_input:valid + .form_span::before {
+                width: 100%;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding: 30px;
+        padding-top: 10px;
+        font-family: sans-serif;
+        font-weight: 100;
+        background-color: $main_light;
+        border-radius: 10px;
+
+        .submit_btn {
+            border: none;
+            cursor: pointer;
+            padding: 14px 28px;
+            border: solid #76282f 2px;
+        }
+
+        .submit_btn:hover {
+            background-color: #76282f;
+        }
+
+        .form_pass {
+            margin: -5px 0 20px 5px;
+            color: #a6a6a6;
+            font-size: 14px;
+        }
+
+        .form_pass:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        span {
+            margin-top: 15px;
+            margin-bottom: -10px;
+            font-size: 0.6em;
+            text-align: center;
+            color: #a6a6a6;
+        }
+    }
+}
+
+#loggedin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: $main_light;
+    color: #838383;
+    display: none;
+
+    #usaer_span {
+        margin-bottom: 20px;
+    }
+    
+    #logged_in_logout {
+        margin-top: 10px;
+        font-size: 0.9em;
+        cursor: pointer;
+    }
+}
+
+.submit_btn {
+    border: none;
+    cursor: pointer;
+    padding: 14px 28px;
+    border: solid #76282f 2px;
+}
+
+.submit_btn:hover {
+    background-color: #76282f;
+}
+
+#info_boxes {
+    margin-top: 50px;
+    display: grid;
+    grid-template: auto / 20% 1fr 1fr 20%;
+    font-family: sans-serif;
+
+    #info_boxes_text {
+        grid-area: 1 / 2 / span 1 / span 1;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    #info_boxes_icons {
+        grid-area: 1 / 3 / span 1 / span 1;
+        display: grid;
+        gap: 10px;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+  }
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    background-size: cover;
+    background-position: -26px;
+}
+
+.flip-card-back {
+    background-color: #c27a7a;
+    color: white;
+    transform: rotateX(-180deg);
+}
+
+#map_with_stats {
+    margin-top: 10px;
+    height: 500px;
+    width: 100%;
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#please_login {
+    display: none;
+}
+
+#panel_information_patient {
+    padding: 20px 20%;
+    display: none;
+    grid-template: auto / 50% 50%;
+    font-family: sans-serif;
+
+    #acc_info {
+        grid-area: 1 / 1 / span 1 / span 1;
+        
+        p {
+            display: inline;
+        }
+        
+    }
+
+    #add_record {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+}
+
+#panel_information_doc {
+    padding: 20px 20%;
+    display: none;
+    font-family: sans-serif;
+
+    table, td, th {  
+        border: 1px solid #ddd;
+        text-align: left;
+    }     
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+}
+
+
+footer {
+    background-color: $text_dark;
+    height: 100px;
+    color: #FFF;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    p {
+        position: relative;
+        top: 40px;
+    }
+}
+
+.links_info {
+    color: $accent_red;
+}
+
+@media only screen and (max-width: 1400px) {
+    #login_form_div {
+        background-position: center;
+    }
+
+
+    #info_boxes {
+        grid-template: auto auto / 10% 1fr 10%;
+
+        #info_boxes_icons {
+            grid-area: 2 / 2 / span 1 / span 1;
+
+            .flip-card {
+                width: auto;
+            }
+
+            .flip-card-front {
+                transform: rotateX(-180deg);
+            }
+
+            .flip-card-inner{
+                transform: rotateX(-180deg);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 854px) {
+    #login_form_div {
+        background-position: left;
+        height: 600px;
+        grid-template: 600px / 2fr;
+    }
+
+    #info_boxes_text {
+        font-size: 1.2rem !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 557px) {
+    header {
+        a {
+            display: none;
+        }
+    }
+}
+

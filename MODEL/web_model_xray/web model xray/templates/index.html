@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-ray Pneumonia</title>
+</head>
+<style>
+    body {
+        background-color: #F8F9FA;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        padding: 20px 2%;
+    }
+
+    img {
+        height: 80%;
+    }
+
+    header {
+        background-color: #191010;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header a {
+        color: #f3e8e8;
+        margin-right: 2vw;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <header>
+        <img src="images_site\HELTI.png" alt="PRAXIDIKE">
+        <a id="helti_mail" href="#"><i class="fa fa-envelope"></i> helti.customer.service@gmail.com</a>
+    </header>
+    <main>
+        <h1>Image classification</h1>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="imageFile">
+            <input type="submit" value="Predict image">
+        </form>
+
+        {% if chance %}
+        <p> Certainty of prediction and prediction: </p>
+        {{ chance }}
+        {{ prediction }}
+        <p> </p>
+        {{ name }}
+        {% endif %}
+    </main>
+</body>
+</html>
