@@ -1,3 +1,5 @@
+[Документация на Български](./READMEBG.md)
+
 # Helti
 
 >This is a project made for NOIT by eccy and thefallenking
@@ -16,7 +18,7 @@ Host the website on localhost using the **Live Server Extension** on Visual Stud
 
 ### Usage of website
 
-After opening the website on a localhost make an account by following the instructions. After making an account return to the inital page and log in if necesarry. Depending on the type of account your are using a panel will open showing you tools for a patient's or a doctor's account. A video tutorial can be seen [here.](https://youtu.be/Y4knOpRMoxs)
+After opening the website on a localhost make an account by following the instructions. After making an account return to the inital page and log in if necesarry. Depending on the type of account your are using a panel will open showing you tools for a patient's or a doctor's account.
 
 ### Usage of model
 
@@ -34,7 +36,7 @@ pip install opencv-python
 pip install opencv-python
 ```
 
-After you have downloaded and installed the dependecies, either use python IDE or another compiler and run app.py. **You can see a working model here**: [heartModel](https://youtu.be/BkTMYXlQAlc) and [XRAYModel](https://youtu.be/BZVlPz36PDM).
+After you have downloaded and installed the dependecies, either use python IDE or another compiler and run app.py.
 
 ## Used programming languages
 
