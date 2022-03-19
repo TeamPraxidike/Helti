@@ -5,7 +5,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(bottomap);
 
 var maskIcon = L.icon({
-    iconUrl: '../images/mask_v2.png',
+    iconUrl: 'images/mask_v2.png',
     // shadowUrl: 'leaf-shadow.png',
 
     iconSize: [50, 50], 
@@ -16,7 +16,7 @@ var maskIcon = L.icon({
 });
 
 var vaxIcon = L.icon({
-    iconUrl: '../images/vaxx_v2.png',
+    iconUrl: 'images/vaxx_v2.png',
     iconSize: [50, 50],
     iconAnchor: [25, 50], 
     shadowAnchor: [4, 62],  
@@ -24,7 +24,7 @@ var vaxIcon = L.icon({
 });
 
 var covidCenter = L.icon({
-    iconUrl: '../images/plus.png',
+    iconUrl: 'images/plus.png',
     iconSize: [50, 50],
     iconAnchor: [25, 50], 
     shadowAnchor: [4, 62],  
