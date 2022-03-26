@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
-<body>
+<body style="overflow: visible;">
     <header>
-        <a href="../index.html" style="height: 80%;"><img src="../images/HELTI.png" alt="PRAXIDIKE"></a>
-        <a href="#">Добре дошъл, <span id="usear_span">USER</span></a>
+        <a href="../index.html" style="padding: 10px;height: 100%;"><img style="height: 70%;" src="../images/HELTI.png" alt="PRAXIDIKE"></a>
+        <div class="wrapper">
+            <a href="#">Добре дошъл, <span id="usear_span">зарежда...</span></a>
+            <button type="button" onclick="logout()" class="logout_btn">Отписване</button>
+        </div>
     </header>
     <main id="panel" role="main">
         <article id="panel_information_patient">
@@ -44,11 +47,15 @@
             </section>
         </article>
         <article id="panel_information_doc">
-            <button type="button" onclick="logout()" class="submit_btn">Отписване</button>
+            <div class="dropdown">
+                <button type="button" onclick="getRecordOf()" class="dropdown_btn">Инструменти</button>
+                <div class="dropdown-content">
+                    <a style="color: black; text-decoration: none;" href="https://helti-lungs.herokuapp.com/" target="about:blank">Инстурмент за класификация на пневмония</a>
+                    <a style="color: black; text-decoration: none;" href="https://helti-hearts.herokuapp.com/" target="about:blank">Инструмент за изчисляване вероятност от сърдечни заболявания</a>
+                </div>
+            </div>
+            <button type="button" onclick="getRecordOf()" class="submit_btn">Търси</button>
             <input type="text" id="patient_number">
-            <button type="button" onclick="getRecordOf()">Търси</button>
-            <button type="button"><a style="color: black; text-decoration: none;" href="https://helti-lungs.herokuapp.com/">Инстурмент за класификация на пневмония</a></button>
-            <button type="button"><a style="color: black; text-decoration: none;" href="https://helti-hearts.herokuapp.com/">Инструмент за изчисляване вероятност от сърдечни заболявания</a></button>
             <table id="doc_table">
                 <tr>
                     <td>Преглед</td>
