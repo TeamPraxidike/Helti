@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="styles/master.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
     <header>
         <img src="./images/HELTI.png" alt="PRAXIDIKE">
-        <a href="./index.html">For english press here</a>
-        <a id="helti_mail" href="#"><i class="fa fa-envelope"></i> helti.customer.service@gmail.com</a>
+        <div class="wrapper">
+            <a href="./indexbg.html">🇧🇬</a>
+            <a id="gb_flag" href="./index.html">🇬🇧</a>
+        </div>
     </header>
     <main role="main">
         <article id="login_form_div_bg">
@@ -50,62 +53,16 @@
                 </div>
             </section>
         </article>
+            
+        <!-- ? Changes take place here -->
         <article id="info_boxes">
             <section id="info_boxes_text">
-                <span>Сайт на ХИС - <a class="links_info" href="https://www.his.bg/bg/dgc">here</a></span>
-                <span>Ваксини - <a class="links_info" href="https://coronavirus.bg/bg/vaccinations">here</a><br></span>
-                <span>Covid+ Cert - <a class="links_info" href="https://play.google.com/store/apps/details?id=dcc.check.bg">here</a></span>
-                <span>Vax Register - <a class="links_info" href="https://www.his.bg/bg/reservation">here</a><br></span>
-                <br>
                 <span>Ние сме Праксидика и обичаме да помагаме на хората. Нашият отбор направи това приложение, за да може следенто на прегледи да става сигурно и лесно за ползване. Регистрирайте се като пациент или доктор и вижте опътването за ползване <a href="https://youtu.be/Y4knOpRMoxs">тук</a>.</span>
             </section>
-            <section id="info_boxes_icons">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Общо случая</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Общо случая</h1>
-                            <p>537 752</p>
-                        </div>
-                    </div>
-                </div> 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Дози ваксини сложени</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Дози ваксини сложени</h1>
-                            <p>2 623 783</p>
-                            <p>Имайте предвид, че това не е броя на ваксинираните.</p>
-                        </div>
-                    </div>
-                </div>  
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Излекувани</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Излекувани</h1>
-                            <p>456 800</p>
-                        </div>
-                    </div>
-                </div>  
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Хоспитализирани</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Хоспитализирани</h1>
-                            <p>5 936</p>
-                        </div>
-                    </div>
-                </div> 
-            </section>
+            <canvas id="myChart" style="width:100%;max-width:700px;height: 200px; min-height: 160px;" aria-label="A chart describing the number of active covid cases in Bulgaria" role="img">></canvas>
+        </article>
+
+
         </article>
         <article id="map_with_stats">
             <div id="map"></div>
