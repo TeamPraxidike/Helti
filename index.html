@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/master.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
@@ -50,63 +51,16 @@
                 </div>
             </section>
         </article>
+        
+        <!-- ? Changes take place here -->
         <article id="info_boxes">
             <section id="info_boxes_text">
-                <span>HIS Website - <a class="links_info" href="https://www.his.bg/bg/dgc">here</a></span>
-                <span>Vaccine info - <a class="links_info" href="https://coronavirus.bg/bg/vaccinations">here</a><br></span>
-                <span>Covid+ Cert - <a class="links_info" href="https://play.google.com/store/apps/details?id=dcc.check.bg">here</a></span>
-                <span>Vax Register - <a class="links_info" href="https://www.his.bg/bg/reservation">here</a><br></span>
-                <br>
                 <span>We are Praxidike and we love helping people. Our team made this app to make the process of keeping appointment records safe and easy to use. Register as a patient or a doctor and check our tutorial <a href="https://youtu.be/Y4knOpRMoxs">here</a>.</span>
             </section>
-            <section id="info_boxes_icons">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Total cases</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Total cases</h1>
-                            <p>537 752</p>
-                        </div>
-                    </div>
-                </div> 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Total vaccines used</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Total vaccines used</h1>
-                            <p>2 623 783</p>
-                            <p>Keep in mind that this isn't the number of people vaccinated.</p>
-                        </div>
-                    </div>
-                </div>  
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Recovered</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Recovered</h1>
-                            <p>456 800</p>
-                        </div>
-                    </div>
-                </div>  
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Hospitilzed</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1>Hospitilzed</h1>
-                            <p>5 936</p>
-                        </div>
-                    </div>
-                </div> 
-            </section>
+            <canvas id="myChart" style="width:100%;max-width:700px;height: 200px; min-height: 160px;" aria-label="A chart describing the number of active covid cases in Bulgaria" role="img">></canvas>
         </article>
+
+        
         <article id="map_with_stats">
             <div id="map"></div>
         </article>
