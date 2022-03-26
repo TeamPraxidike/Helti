@@ -21,9 +21,10 @@ header {
     height: 80%; }
   header a {
     color: #f3e8e8;
-    margin-right: 2vw;
     font-size: 1.2rem;
     text-decoration: none; }
+  header #gb_flag {
+    margin-right: 1vw; }
 
 main {
   width: 100%; }
@@ -281,13 +282,19 @@ footer {
     margin-bottom: 20px; } }
 @media only screen and (max-width: 557px) {
   header a {
-    display: none; }
+    margin-right: 4px;
+    font-size: 1.5em; }
+  header .wrapper {
+    margin-right: 10px; }
 
   #myChart {
     width: 0px;
     height: 0px;
     opacity: 0;
     margin-bottom: -200px;
-    display: hidden; } }
+    display: hidden; }
+
+  #info_boxes {
+    margin: 40px 10%; } }
 
 /*# sourceMappingURL=master.css.map */

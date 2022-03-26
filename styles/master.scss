@@ -39,9 +39,12 @@ header {
 
     a {
         color: $text_light;
-        margin-right: 2vw;
         font-size: 1.2rem;
         text-decoration: none;
+    }
+
+    #gb_flag {
+        margin-right: 1vw;
     }
 }
 
@@ -401,7 +404,12 @@ footer {
 @media only screen and (max-width: 557px) {
     header {
         a {
-            display: none;
+            margin-right: 4px;
+            font-size: 1.5em;
+        }
+
+        .wrapper {
+            margin-right: 10px;
         }
     }
     #myChart {
@@ -410,6 +418,10 @@ footer {
         opacity: 0;
         margin-bottom: -200px;
         display: hidden;
+    }
+
+    #info_boxes {
+        margin: 40px 10%;
     }
 }
 
