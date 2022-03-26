@@ -63,3 +63,60 @@ marker9.addTo(bottomap).bindPopup(`<p>Мястото е МЦ Европейск�
 
 let marker10 = new L.Marker([42.50425,27.46106], {icon: vaxIcon});
 marker10.addTo(bottomap).bindPopup(`<p>Мястото е МЦ Европейска здравна грижа</p> <img src="../images/bolnica1.png" alt="" style="width: 200px;">`);
+
+
+// ? Changes begin here:
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jul 2021', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan 2022', 'Feb', 'Mar'],
+        datasets: [{
+            label: 'Total cases',
+            data: [7700, 22386, 42020, 82910, 113229, 95207, 200142, 261402, 189243],
+            borderColor: '#76282f',
+            fill: false,
+            tension: 0.4
+        }]
+    },
+    options: {
+        scales: {
+            xAxis: {
+                ticks: {
+                    display: true
+                },
+                grid: {
+                    display: false
+                }
+            },
+            yAxis: {
+                ticks: {
+                    display: true
+                },
+                grid: {
+                    display: false
+                }
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Number of active cases in Bulgaria for every 25th day of the month'
+            },
+            legend: {
+              display: false,
+            },
+            tooltip: {
+                displayColors: false
+            }
+        },
+        elements: {
+            point: {
+                radius: 1,
+                hoverRadius: 4,
+                backgroundColor: '#76282f'
+            }
+        }
+    }
+});
