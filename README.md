@@ -1,6 +1,7 @@
-[Документация на Български](./READMEBG.md)
 
 # Helti
+
+[Документация на Български](./READMEBG.md)
 
 >This is a project made for NOIT by eccy and thefallenking
 
@@ -52,7 +53,7 @@ If you want to read the code documentation open [CODE.md](./CODE.md)
 
 This projects uses a variety of open-source packages
 
-- Website - leaflet.js
+- Website - leaflet.js, CryptoJS
 - Machine learning models - tensorflow, opencv-python, numpy, flask
 - Chat bot - numpy, random, json, classla, nltk, torch, NeuralNet, nltk_utils, bagOfWords_BG, bot_utils, StripOfChar, chat, get_response, langdetect, detect, detect_langs, Flask, render_template, request, jsonify
 
@@ -74,5 +75,3 @@ The current develpment stage revolves around 2 versions of the Bot:
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
