@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center; }
   header img {
-    height: 80%; }
+    height: 65%; }
   header a {
     color: #f3e8e8;
     font-size: 1.2rem;
@@ -148,10 +148,51 @@ main {
     font-size: 0.9em;
     cursor: pointer; }
 
-.submit_btn {
-  border: none;
+.dropdown_btn {
   cursor: pointer;
-  padding: 14px 28px;
+  padding: 10px 10px;
+  border: solid #76282f 2px; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: visible; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  max-width: 300px;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; }
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.dropdown:hover .dropdown_btn {
+  background-color: #76282f; }
+
+.logout_btn {
+  cursor: pointer;
+  margin: 0px 10px;
+  padding: 10px;
+  background-color: #ddd;
+  border: none; }
+
+.submit_btn {
+  cursor: pointer;
+  padding: 10px 10px;
   border: solid #76282f 2px; }
 
 .submit_btn:hover {
@@ -273,6 +314,11 @@ footer {
         transform: rotateX(-180deg); } }
 @media only screen and (max-width: 854px) {
   #login_form_div {
+    background-position: left;
+    height: 600px;
+    grid-template: 600px / 2fr; }
+
+  #login_form_div_bg {
     background-position: left;
     height: 600px;
     grid-template: 600px / 2fr; }
