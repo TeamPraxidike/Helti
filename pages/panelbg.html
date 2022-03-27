@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body style="overflow: visible;">
     <header>
@@ -48,7 +49,7 @@
         </article>
         <article id="panel_information_doc">
             <div class="dropdown">
-                <button type="button" onclick="getRecordOf()" class="dropdown_btn">Инструменти</button>
+                <button type="button" class="dropdown_btn">Инструменти</button>
                 <div class="dropdown-content">
                     <a style="color: black; text-decoration: none;" href="https://helti-lungs.herokuapp.com/" target="about:blank">Инстурмент за класификация на пневмония</a>
                     <a style="color: black; text-decoration: none;" href="https://helti-hearts.herokuapp.com/" target="about:blank">Инструмент за изчисляване вероятност от сърдечни заболявания</a>
@@ -132,11 +133,11 @@
                 current_record = data.appointments;
             });
 
-            let pregled_info = document.getElementById('pregled').value;
-            let doctor_info = document.getElementById('doctor').value;
-            let bolest_info = document.getElementById('bolest').value;
-            let info_info = document.getElementById('info').value;
-            let mqsto_info = document.getElementById('mqsto').value;
+            let pregled_info = CryptoJS.AES.encrypt(document.getElementById('pregled').value, "elcock").toString();
+            let doctor_info = CryptoJS.AES.encrypt(document.getElementById('doctor').value, "elcock").toString();
+            let bolest_info = CryptoJS.AES.encrypt(document.getElementById('bolest').value, "elcock").toString();
+            let info_info = CryptoJS.AES.encrypt(document.getElementById('info').value, "elcock").toString();
+            let mqsto_info = CryptoJS.AES.encrypt(document.getElementById('mqsto').value, "elcock").toString();
 
             let pregled_unit = {
                 pregled: pregled_info,
@@ -177,13 +178,21 @@
                     let cell_doctor = row.insertCell(y);
                     let cell_pregled = row.insertCell(y);
 
-                    cell_pregled.innerText = elem.pregled;
-                    cell_doctor.innerText = elem.doctor;
-                    cell_bolest.innerText = elem.bolest;
-                    cell_info.innerText = elem.info;
-                    cell_mqsto.innerText = elem.mqsto;
+                    cell_pregled.innerText = hexToUtf8(CryptoJS.AES.decrypt(elem.pregled, "elcock").toString());
+                    cell_doctor.innerText = hexToUtf8(CryptoJS.AES.decrypt(elem.doctor, "elcock").toString());
+                    cell_bolest.innerText = hexToUtf8(CryptoJS.AES.decrypt(elem.bolest, "elcock").toString());
+                    cell_info.innerText = hexToUtf8(CryptoJS.AES.decrypt(elem.info, "elcock").toString());
+                    cell_mqsto.innerText = hexToUtf8(CryptoJS.AES.decrypt(elem.mqsto, "elcock").toString());
                 });
             });
+        }
+
+        function hexToUtf8(s)
+        {
+        return decodeURIComponent(
+            s.replace(/\s+/g, '') // remove spaces
+            .replace(/[0-9a-f]{2}/g, '%$&') // add '%' before each 2 characters
+        );
         }
     </script>
 </body>
