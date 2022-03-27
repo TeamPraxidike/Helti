@@ -318,6 +318,11 @@ footer {
     height: 600px;
     grid-template: 600px / 2fr; }
 
+  #login_form_div_bg {
+    background-position: left;
+    height: 600px;
+    grid-template: 600px / 2fr; }
+
   #info_boxes_text {
     font-size: 1.2rem !important;
     margin-bottom: 20px; } }
