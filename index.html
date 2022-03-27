@@ -7,8 +7,8 @@
     <title>Helti</title>
 
     <!-- * Linkage -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/styles/master.css">
-    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="styles/master.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
@@ -16,10 +16,10 @@
 </head>
 <body>
     <header>
-        <img src="{{ site.baseurl }}/images/HELTI.png" alt="PRAXIDIKE">
+        <img src="./images/HELTI.png" alt="PRAXIDIKE">
         <div class="wrapper">
-            <a href="{{ site.baseurl }}/indexbg.html">🇧🇬</a>
-            <a id="gb_flag" href="{{ site.baseurl }}/index.html">🇬🇧</a>
+            <a href="./indexbg.html">🇧🇬</a>
+            <a id="gb_flag" href="./index.html">🇬🇧</a>
         </div>
     </header>
     <main role="main">
@@ -43,13 +43,13 @@
                         </div>
                         <div class="form_pass">Forgor password?</div>
                         <button onclick="login()" type="button" class="submit_btn">Login</button>
-                        <span id="register"">Don't have an account? <a href="{{ site.baseurl }}/pages/register.html">Sign up</a></span>
+                        <span id="register"">Don't have an account? <a href="./pages/register.html">Sign up</a></span>
                     </div>
                 </form>
                 <div id="loggedin">
                     <span>Hello there, </span>
                     <span id="usaer_span">USER</span>
-                    <a href="{{ site.baseurl }}/pages/panel.html"><button onclick="" type="button" class="submit_btn">Access Panel</button></a>
+                    <a href="pages/panel.html"><button onclick="" type="button" class="submit_btn">Access Panel</button></a>
                     <span id="logged_in_logout" onclick="logout()">Log out.</span>
                 </div>
             </section>
@@ -72,8 +72,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
 
-    <script src="{{ site.baseurl }}/scripts/login.js"></script>
-    <script src="{{ site.baseurl }}/scripts/script.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/script.js"></script>
 
     <script>
         auth.onAuthStateChanged(function(user) {
