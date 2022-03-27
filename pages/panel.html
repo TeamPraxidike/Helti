@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helti Panel</title>
-    <base href="/Helti-NOIT/">
 
     <!-- * Linkage -->
-    <link rel="stylesheet" href="/styles/master.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/master.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -17,10 +16,10 @@
 </head>
 <body style="overflow: visible;">
     <header>
-        <img style="height: 70%;" src="/images/HELTI.png" alt="PRAXIDIKE">
+        <img style="height: 70%;" src="{{ site.baseurl }}/images/HELTI.png" alt="PRAXIDIKE">
         <div class="wrapper">
-            <a href="/pages/panelbg.html">🇧🇬</a>
-            <a id="gb_flag" href="/pages/panel.html">🇬🇧</a>
+            <a href="{{ site.baseurl }}/pages/panelbg.html">🇧🇬</a>
+            <a id="gb_flag" href="{{ site.baseurl }}/pages/panel.html">🇬🇧</a>
         </div>
         <div class="wrapper">
             <a href="#">Welcome, <span id="usear_span">loading...</span></a>
@@ -81,7 +80,7 @@
     </main>
     <div id="please_login">
         <p>Please return to the main page and log in.</p>
-        <a href="/index.html">here</a>
+        <a href="{{ site.baseurl }}/index.html">here</a>
     </div>
     <footer style="position: absolute; bottom: 0px; width: 100%;">
         <p>Helti &COPY; made by Praxidike</p>
@@ -92,8 +91,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
 
-    <script src="/scripts/login.js"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="{{ site.baseurl }}/scripts/login.js"></script>
+    <script src="{{ site.baseurl }}/scripts/script.js"></script>
 
     <script>
         auth.onAuthStateChanged(function(user) {

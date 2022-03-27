@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helti</title>
-    <base href="/Helti-NOIT/">
     <!-- * Linkage -->
-    <link rel="stylesheet" href="/styles/master.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/master.css">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
@@ -17,10 +16,10 @@
 </head>
 <body>
     <header>
-        <img src="/images/HELTI.png" alt="PRAXIDIKE">
+        <img src="{{ site.baseurl }}/images/HELTI.png" alt="PRAXIDIKE">
         <div class="wrapper">
-            <a href="/indexbg.html">🇧🇬</a>
-            <a id="gb_flag" href="/index.html">🇬🇧</a>
+            <a href="{{ site.baseurl }}/indexbg.html">🇧🇬</a>
+            <a id="gb_flag" href="{{ site.baseurl }}/index.html">🇬🇧</a>
         </div>
     </header>
     <main role="main">
@@ -44,13 +43,13 @@
                         </div>
                         <div class="form_pass">Забравена парола?</div>
                         <button onclick="login()" type="button" class="submit_btn">Вписване</button>
-                        <span id="register"">Нямате акаунт? <a href="/pages/register.html">Регистрация</a></span>
+                        <span id="register"">Нямате акаунт? <a href="{{ site.baseurl }}/pages/register.html">Регистрация</a></span>
                     </div>
                 </form>
                 <div id="loggedin">
                     <span>Здравей, </span>
                     <span id="usaer_span">USER</span>
-                    <a href="/pages/panelbg.html"><button onclick="" type="button" class="submit_btn">Влез в портала</button></a>
+                    <a href="{{ site.baseurl }}/pages/panelbg.html"><button onclick="" type="button" class="submit_btn">Влез в портала</button></a>
                     <span id="logged_in_logout" onclick="logout()">Излизане от профила.</span>
                 </div>
             </section>
@@ -78,8 +77,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
 
-    <script src="/scripts/login.js"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="{{ site.baseurl }}/scripts/login.js"></script>
+    <script src="{{ site.baseurl }}/scripts/script.js"></script>
 
     <script>
         auth.onAuthStateChanged(function(user) {
