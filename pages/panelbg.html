@@ -7,8 +7,7 @@
     <title>Helti Panel</title>
 
     <!-- * Linkage -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/styles/master.css">
-    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="../styles/master.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -16,11 +15,7 @@
 </head>
 <body style="overflow: visible;">
     <header>
-        <img style="height: 70%;" src="{{ site.baseurl }}/images/HELTI.png" alt="PRAXIDIKE">
-        <div class="wrapper">
-            <a href="{{ site.baseurl }}/indexbg.html">🇧🇬</a>
-            <a id="gb_flag" href="{{ site.baseurl }}/index.html">🇬🇧</a>
-        </div>
+        <img style="height: 70%;" src="../images/HELTI.png" alt="PRAXIDIKE">
         <div class="wrapper">
             <a href="#">Добре дошъл, <span id="usear_span">зарежда...</span></a>
             <button type="button" onclick="logout()" class="logout_btn">Отписване</button>
@@ -78,7 +73,7 @@
     </main>
     <div id="please_login">
         <p>Моля върнете се в заглавната страница и влезте в профила си.</p>
-        <a href="{{ site.baseurl }}/index.html">тук</a>
+        <a href="../index.html">тук</a>
     </div>
     <footer style="position: absolute; bottom: 0px; width: 100%;">
         <p>Helti &COPY; made by Praxidike</p>
@@ -89,8 +84,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
 
-    <script src="{{ site.baseurl }}/scripts/login.js"></script>
-    <script src="{{ site.baseurl }}/scripts/script.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/script.js"></script>
 
     <script>
         auth.onAuthStateChanged(function(user) {
