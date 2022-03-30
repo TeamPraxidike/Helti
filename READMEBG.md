@@ -1,6 +1,6 @@
-[Documentation in English](./README.md)
-
 # Helti
+
+[Documentation in English](./README.md)
 
 >Този проект е направен за НОИТ от eccy и thefallenking
 
@@ -52,7 +52,7 @@ pip install opencv-python
 
 Този проект използва open-source пакети и библиотеки
 
-- Уебсайт - leaflet.js
+- Уебсайт - leaflet.js, CryptoJS
 - Модели на ИИ - tensorflow, opencv-python, numpy, flask
 - Чат бот - numpy, random, json, classla, nltk, torch, NeuralNet, nltk_utils, bagOfWords_BG, bot_utils, StripOfChar, chat, get_response, langdetect, detect, detect_langs, Flask, render_template, request, jsonify
 
@@ -74,4 +74,3 @@ pip install opencv-python
 ## Лиценз
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
