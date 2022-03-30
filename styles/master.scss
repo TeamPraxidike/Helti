@@ -25,6 +25,15 @@ body {
     width: 100%;
 }
 
+#chat_bot_frame {
+    border: none;
+    position: fixed;
+    background: none;
+    bottom: 0;
+    right: 0;
+    z-index: 999999;
+}
+
 header {
     background-color: hsl(0, 21%, 8%);
     width: 100%;
