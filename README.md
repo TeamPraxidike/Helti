@@ -3,7 +3,9 @@
 
 [Документация на Български](./READMEBG.md)
 
->This is a project made for NOIT by eccy and thefallenking
+>This is a project made for Hackathon October 2021 (hosted by Asen Zlatarov) & NOIT by eccy, joan, smensmen and thefallenking
+
+>Won first place at Hackathon Burgas "Asen Zlatarov"
 
 ## Installation
 
@@ -75,3 +77,6 @@ The current develpment stage revolves around 2 versions of the Bot:
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+special thanks to gesha, alexander and pepi - moral support
+
