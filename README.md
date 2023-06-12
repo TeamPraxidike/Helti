@@ -3,7 +3,7 @@
 
 [Документация на Български](./READMEBG.md)
 
->This is a project made for Hackathon October 2021 (hosted by Asen Zlatarov) & NOIT by eccy, joan, smensmen and thefallenking
+>This is a project made for Hackathon October 2021 (hosted by Asen Zlatarov) & NOIT by eccy, joan, smensmen
 
 >Won first place at Hackathon Burgas "Asen Zlatarov"
 
